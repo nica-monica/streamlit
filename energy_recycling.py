@@ -6,7 +6,6 @@ import pandas as pd
 import folium
 
 from folium import plugins
-import matplotlib.pyplot as plt
 
 import streamlit_folium
 import numpy as np
