@@ -2,4 +2,4 @@ pandas==1.4.3
 folium==0.13
 streamlit==1.15.0
 streamlit_folium==0.7.0
-geopandas= 0.12.1
+geopandas== 0.12.1
