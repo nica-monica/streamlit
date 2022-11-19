@@ -37,7 +37,7 @@ def display_map(recycling_data, year):
     recycling_data= recycling_data[recycling_data['year']== year]
     measure = display_measure_filter()
     # st.write(recycling_data['Län'].unique())
-    map= folium.Map(location= [63,14], zoom_start=5, tiles= 'CartoDB positron')
+    map= folium.Map(location= [63,14], zoom_start=4, tiles= 'CartoDB positron')
 
     # this is a workaround to make sure the swedish characters are displayed
     import json
@@ -71,7 +71,7 @@ def display_map(recycling_data, year):
     if measure== 'Total energy produced - Mwh':
         choropleth.geojson.add_child(folium.features.GeoJsonTooltip(['NAME_1', 'energy'], labels= False))
 
-    st_map= st_folium(map, width=400, height=800)
+    st_map= st_folium(map, width=400, height=700)
 
     # kommun= ''
     # if st.map['last_active_drawing']:
