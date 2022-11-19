@@ -3,19 +3,15 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import folium
-import branca
+
 from folium import plugins
 import matplotlib.pyplot as plt
-from scipy.interpolate import griddata
-# import geojsoncontour
-import scipy as sp
-import scipy.ndimage
+
 import streamlit_folium
 import numpy as np
 from streamlit_folium import st_folium
 import geopandas as gpd
-import branca
-from branca.colormap import ColorMap,StepColormap,LinearColormap
+
 
 
 APP_TITLE = 'Waste energy recycling in Sweden'
