@@ -71,7 +71,7 @@ def display_map(recycling_data, year):
     if measure== 'Total energy produced - Mwh':
         choropleth.geojson.add_child(folium.features.GeoJsonTooltip(['NAME_1', 'energy'], labels= False))
 
-    st_map= st_folium(map, width=400, height=700)
+    st_map= st_folium(map, width=300, height=600)
 
     # kommun= ''
     # if st.map['last_active_drawing']:
