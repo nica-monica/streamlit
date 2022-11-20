@@ -44,7 +44,7 @@ def display_map(recycling_data, year, measure):
 
     # this is a workaround to make sure the swedish characters are displayed
     import json
-    sweden_geojson= gpd.read_file(r'C:\Users\mihai\Documents\monica\Dataquest\TUTORIAL\portofoliu\recycling sweden\Choropleth map\data\sweden-counties_1680.geojson')
+    sweden_geojson= gpd.read_file('data/sweden-counties_1680.geojson')
     back_geojson = sweden_geojson.to_json()
     j = json.loads(back_geojson)
 
@@ -90,7 +90,7 @@ def main():
 
     #Load Data
     recycling_data = pd.read_csv(
-        r'C:\Users\mihai\Documents\monica\Dataquest\TUTORIAL\portofoliu\recycling sweden\Choropleth map\recycling_data.csv')
+        'data/recycling_data.csv')
     recycling_data['year'] = recycling_data['year'].astype(int)
 
     col1, col2 = st.columns(2)
