@@ -28,7 +28,7 @@ def display_time_slider(recycling_data):
     return year
 def display_measure_filter():
     count=0
-    measure=  st.radio ('Measure', ['Total energy produced - Mwh', 'Energy per inhabitant'], key='mn')
+    measure=  st.radio ('Measure', ['Total energy produced - Mwh', 'Energy per inhabitant - Mwh'], key='mn')
     # st.write('You select:', 'Measure')
     count += 1
     return measure
@@ -69,7 +69,7 @@ def display_map(recycling_data, year, measure):
         kommun= feature['properties']['NAME_1']
         display1= recycling_data[recycling_data['Län'] == kommun]['Total energy produced - Mwh'].values[0]
         feature['properties']['energy']= str('Energy produced:') + f'{display1:,.2f}' + ' Mwh'
-        display2= recycling_data[recycling_data['Län']==kommun]['Energy per inhabitant'].values[0]
+        display2= recycling_data[recycling_data['Län']==kommun]['Energy per inhabitant - Mwh'].values[0]
         feature['properties']['energy per inhabitant']= 'Energy produced per inhabitant:'  + f'{display2:,.2f}' + ' Mwh'
 
     if measure== 'Energy per inhabitant':
