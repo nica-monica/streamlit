@@ -72,7 +72,7 @@ def display_map(recycling_data, year, measure):
         display2= recycling_data[recycling_data['Län']==kommun]['Energy per inhabitant - Mwh'].values[0]
         feature['properties']['energy per inhabitant']= 'Energy produced per inhabitant:'  + f'{display2:,.2f}' + ' Mwh'
 
-    if measure== 'Energy per inhabitant':
+    if measure== 'Energy per inhabitant - Mwh':
         choropleth.geojson.add_child(folium.features.GeoJsonTooltip(['NAME_1', 'energy per inhabitant'], labels= False))
     if measure== 'Total energy produced - Mwh':
         choropleth.geojson.add_child(folium.features.GeoJsonTooltip(['NAME_1', 'energy'], labels= False))
